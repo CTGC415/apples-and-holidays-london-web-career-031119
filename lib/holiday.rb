@@ -66,7 +66,7 @@ def all_supplies_in_holidays(holiday_hash)
     holiday.each do |holiday, supplies|
       message = []
       binding.pry
-      holiday.to_s.split("_").each{|e| e.empty? e : e.capitalize << message}
+      holiday.to_s.split("_").each{|e| if !(e.empty?) {e.capitalize << message}}
         puts "  #{message.join(" ")}: #{supplies.join(", ")}"
     end
   end
