@@ -67,7 +67,7 @@ def all_supplies_in_holidays(holiday_hash)
       if holiday.to_s.include?("_")
         message = holiday.to_s.split("_").map { |e| e.capitalize }.join(" ")
       else
-        message = holiday.to_s.capitalize 
+        message = holiday.to_s.capitalize
       end
         puts "  #{message}: #{supplies.join(", ")}"
     end
